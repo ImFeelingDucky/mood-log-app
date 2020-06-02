@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mood Diary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Mood Diary</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size-md="8" offset-md="2">
+              <ion-item>
+                <ion-label position="floating">How are you feeling?</ion-label>
+                <ion-input id="description" placeholder="Energised" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Rate your vibe</ion-label>
+                <ion-input id="rating" placeholder="9" type="number"></ion-input>
+              </ion-item>
+              <ion-button id="add-entry" class="ion-margin"><ion-icon slot="start" name="add-outline"></ion-icon>Add entry</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size-md="8" offset-md="2">
+              <ion-list id="mood-entry-list">
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </ion-app>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
